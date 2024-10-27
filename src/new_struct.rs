@@ -42,7 +42,7 @@ pub enum Data {
 pub struct Doc {
     pub title: String,
     pub filetype: String,
-    pub course: Course,
+    pub course: Vec<Course>,
     pub content: Vec<DocContent>,
 }
 

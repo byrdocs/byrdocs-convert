@@ -5,7 +5,7 @@ pub struct MetaData {
     pub id: String,
     #[serde(rename = "type")]
     pub type_: Type,
-    pub data: Data
+    pub data: Data,
 }
 
 #[derive(Debug, serde::Deserialize, serde::Serialize)]
@@ -51,11 +51,11 @@ pub struct Doc {
 #[serde(tag = "type")]
 pub enum Item {
     #[serde(rename = "book")]
-    Book {id: String, data: Book},
+    Book { id: String, data: Book },
     #[serde(rename = "doc")]
-    Doc {id: String, data: Doc},
+    Doc { id: String, data: Doc },
     #[serde(rename = "test")]
-    Test {id: String, data: Test},
+    Test { id: String, data: Test },
 }
 
 #[derive(Debug, serde::Deserialize, serde::Serialize)]
